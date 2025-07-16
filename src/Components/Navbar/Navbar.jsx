@@ -4,12 +4,13 @@ import underline from "../../assets/nav_underline.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [menu, setMenu] = useState("home");
 
   return (
     <div className="navbar">
       <div className="logo">WH1ZZYWARE</div>
-      <ul className="nav-menu">
+      <ul className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
         <li>
           <AnchorLink className="anchor-link" href="#home">
             {" "}
@@ -47,6 +48,12 @@ const Navbar = () => {
           Connect With Me
         </AnchorLink>
       </div>
+      <button
+        className="mobile-menu-btn"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
+        {mobileMenuOpen ? "✕" : "☰"}
+      </button>
     </div>
   );
 };
