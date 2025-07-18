@@ -1,46 +1,71 @@
-*.about {
+.about {
+  padding: 80px 8%;
+  color: #333;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+.about-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 80px;
-  margin: 80px 170px;
-}
-
-.about-title {
-  position: relative;
+  gap: 15px;
+  margin-bottom: 60px;
 }
 
 .about-title h1 {
-  padding: 0px 30px;
-  font-size: 70px;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+  position: relative;
 }
-
-.about-title img {
+.about-title h1::after {
+  content: "";
   position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #646cff, #61dafb);
+  border-radius: 2px;
 }
 
 .about-sections {
   display: flex;
-  gap: 80px;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-left img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-left img:hover {
+  transform: scale(1.03);
 }
 
 .about-right {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 30px;
 }
 
 .about-para {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  font-size: 24px;
-  font-weight: 400;
+  gap: 15px;
 }
 
 .about-skills {
@@ -48,33 +73,34 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .about-skill {
   display: flex;
-  gap: 50px;
-  align-items: center;
-  transition: 0.3sec;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .about-skill p {
-  min-width: 150px;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
 }
 
 .about-skill hr {
-  outline: none;
-  border: none;
-  width: 50%;
   height: 8px;
-  border-radius: 50px;
-  background: linear-gradient(267deg, #256dda 0.36%, #13235a);
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #646cff, #61dafb);
+  transition: width 0.5s ease;
 }
 
 .about-achievements {
   display: flex;
-  width: 100%;
   justify-content: space-around;
-  margin-bottom: 80px;
+  align-items: center;
+  margin-top: 80px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .about-achievement {
@@ -82,21 +108,31 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  transition: 0.5s;
+  padding: 20px;
+  min-width: 200px;
 }
 
 .about-achievement h1 {
-  font-size: 60px;
+  font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(267deg, #256dda 0.36%, #13235a);
-  background-clip: text;
+  background: linear-gradient(90deg, #646cff, #61dafb);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .about-achievement p {
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  text-align: center;
+}
+
+.about-achievements hr {
+  height: 60px;
+  width: 2px;
+  border: none;
+  background-color: #ddd;
 }
 
 .about-skill:hover {
@@ -107,4 +143,58 @@
 .about-achievement:hover {
   transform: scale(1.12);
   transition: 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-sections {
+    flex-direction: column;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-left img {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 5%;
+  }
+
+  .about-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-achievements {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-achievements hr {
+    height: 2px;
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title h1 {
+    font-size: 2rem;
+  }
+
+  .about-para p {
+    font-size: 1rem;
+  }
+
+  .about-achievement {
+    min-width: 150px;
+  }
+
+  .about-achievement h1 {
+    font-size: 2rem;
+  }
 }

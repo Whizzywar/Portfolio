@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="logo">WH1ZZYWARE</div>
+      <div className="logo">UBANI WISDOM</div>
       <ul className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
         <li>
           <AnchorLink className="anchor-link" href="#home">

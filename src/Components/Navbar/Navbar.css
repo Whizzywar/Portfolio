@@ -58,12 +58,10 @@
 }
 
 .nav-menu img {
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 100%;
-  height: auto;
-  animation: underlineFadeIn 0.3s ease;
+  width: 50%;
+  height: 4px;
+  margin-top: 4px;
+  transition: all 0.3s ease;
 }
 
 .nav-connect {
