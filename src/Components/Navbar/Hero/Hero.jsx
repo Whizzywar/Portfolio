@@ -1,19 +1,20 @@
 import React from "react";
 import "./Hero.css";
-import java from "../../../assets/java.jpg";
+import whizzy_p from "../../../assets/whizzy_p.jpg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Hero = () => {
   return (
     <div>
       <div id="home" className="hero">
-        <img src={java} alt="" />
+        <img src={whizzy_p} alt="" />
         <h1>
-          <span>I'm Ubani Wisdom, </span> frontend developer based in Nigeria.
+          <span>I am Wisdom </span> a Frontend Developer
         </h1>
         <p>
-          I am frontend developer from FCT, Abuja with 3yrs experience in the
-          tech industry
+          that posses strong foundation in web development with passion for
+          creating aesthetically pleasing interfaces using frontend
+          technologies. 
         </p>
         <div className="hero-action">
           <div className="hero-connect">
@@ -21,7 +22,6 @@ const Hero = () => {
               Connect With Me
             </AnchorLink>
           </div>
-          <div className="hero-resume">My resume</div>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="logo">UBANI WISDOM</div>
+      <div className="logo">My Portfolio</div>
       <ul className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
         <li>
           <AnchorLink className="anchor-link" href="#home">
@@ -32,7 +32,7 @@ const Navbar = () => {
         </li>
         <li>
           <AnchorLink className="anchor-link" offset={50} href="#work">
-            <p onClick={() => setMenu("work")}>Portfolio</p>
+            <p onClick={() => setMenu("work")}>Projects</p>
           </AnchorLink>
           {menu === "work" ? <img src={underline} alt="" /> : <></>}
         </li>
@@ -45,7 +45,7 @@ const Navbar = () => {
       </ul>
       <div className="nav-connect">
         <AnchorLink className="anchor-link" offset={50} href="#contact">
-          Connect With Me
+          Hire Me!
         </AnchorLink>
       </div>
       <button
